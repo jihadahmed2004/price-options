@@ -5,6 +5,7 @@ import { Audio, Grid } from 'react-loader-spinner'
 
 const Phones = () => {
     const [phones, setPhones] = useState([]);
+    const [loading, setLoading] = useState([true]);
 
     useEffect(() => {
         // fetch('https://openapi.programming-hero.com/api/phones?search=iphone')
@@ -40,7 +41,7 @@ const Phones = () => {
                     wrapperStyle
                     wrapperClass
                 />
-                <Grid
+                {/* <Grid
   height="80"
   width="80"
   color="#4fa94d"
@@ -49,7 +50,7 @@ const Phones = () => {
   wrapperStyle={{}}
   wrapperClass=""
   visible={true}
-/>
+/> */}
             </div>}
             <h2 className="text-5xl">PHones: {phones.length}</h2>
             <BarChart width={1200} height={400} data={phones}>
